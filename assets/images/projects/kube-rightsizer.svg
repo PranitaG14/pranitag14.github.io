@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-07 kube-rightsizer schematic</title>
+<title>PN-12 kube-rightsizer schematic</title>
 <desc>Prometheus usage history and a ResourcePolicy CRD feed a reconcile loop, p95 engine and GitOps patcher that open a pull request. Live Deployments are read-only.</desc>
 <defs>
 <pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
@@ -20,7 +20,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
 
 <rect x="0" y="0" width="640" height="28" fill="#020617" stroke="#f8fafc" stroke-opacity="0.5" stroke-width="1"/>
-<text x="16" y="18" font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" font-size="10" letter-spacing="0.06em" fill="#f8fafc">PN-07 · KUBE-RIGHTSIZER · PULL-REQUEST-ONLY RIGHT-SIZING</text>
+<text x="16" y="18" font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" font-size="10" letter-spacing="0.06em" fill="#f8fafc">PN-12 · KUBE-RIGHTSIZER · PULL-REQUEST-ONLY RIGHT-SIZING</text>
 
 <g font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" letter-spacing="0.06em">
 <!-- controller group -->

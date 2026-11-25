@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-02 p2pexceptions schematic</title>
+<desc>Synthetic invoice lines go through a three-way match; each failed line gets exactly one cause from a fixed precedence order, is costed, and the causes are ranked in a cost-weighted Pareto and validated against a labelled sample.</desc>
+<defs>
+<pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
+<pattern id="G" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#f8fafc" stroke-opacity="0.09"/></pattern>
+<marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#60a5fa"/></marker>
+<marker id="l" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#f8fafc" fill-opacity="0.7"/></marker>
+<style>
+text{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:0.06em;fill:#f8fafc;text-transform:uppercase}
+.t{font-size:10px}
+.s{font-size:9px;fill-opacity:0.7}
+.h{font-size:9px;fill:#60a5fa}
+.b{fill:none;stroke:#f8fafc;stroke-opacity:0.6;stroke-width:1}
+.k{fill:none;stroke:#60a5fa;stroke-width:1}
+.w{stroke:#f8fafc;stroke-opacity:0.7;stroke-width:1;fill:none}
+</style>
+</defs>
+
+<rect width="640" height="360" fill="#020617"/>
+<rect width="640" height="360" fill="url(#g)"/>
+<rect width="640" height="360" fill="url(#G)"/>
+
+<rect x="16" y="16" width="608" height="28" class="b"/>
+<text x="28" y="34" class="t">PN-02 · P2PEXCEPTIONS · THREE-WAY MATCH EXCEPTIONS</text>
+
+<rect x="16" y="72" width="136" height="72" class="b"/>
+<text x="28" y="92" class="t">P2P LINES</text>
+<text x="28" y="110" class="s">400,000 invoice</text>
+<text x="28" y="124" class="s">lines, seeded</text>
+
+<rect x="168" y="72" width="136" height="72" class="b"/>
+<text x="180" y="92" class="t">3-WAY MATCH</text>
+<text x="180" y="110" class="s">PO · GR · invoice</text>
+<text x="180" y="124" class="h">72,739 fail · 18.2%</text>
+
+<rect x="320" y="72" width="136" height="72" class="b"/>
+<text x="332" y="92" class="t">CLASSIFIER</text>
+<text x="332" y="110" class="s">one cause each</text>
+<text x="332" y="124" class="s">fixed precedence</text>
+
+<rect x="472" y="72" width="136" height="72" class="k"/>
+<text x="484" y="92" class="t">COST PARETO</text>
+<text x="484" y="110" class="s">handling minutes</text>
+<text x="484" y="124" class="s">+ late-pay risk</text>
+
+<path d="M152 108H166" class="w" marker-end="url(#l)"/>
+<path d="M304 108H318" class="w" marker-end="url(#l)"/>
+<path d="M456 108H470" class="w" marker-end="url(#l)"/>
+
+<path d="M540 144V172M84 172H540" class="k"/>
+<path d="M84 172V194" class="k" marker-end="url(#a)"/>
+<path d="M236 172V194" class="k" marker-end="url(#a)"/>
+<path d="M388 172V194" class="k" marker-end="url(#a)"/>
+<path d="M540 172V194" class="k" marker-end="url(#a)"/>
+
+<rect x="16" y="196" width="136" height="72" class="k"/>
+<text x="28" y="216" class="t">OFF CONTRACT</text>
+<text x="28" y="234" class="h">#1 by cost</text>
+<text x="28" y="248" class="s">25.5% of cost</text>
+
+<rect x="168" y="196" width="136" height="72" class="b"/>
+<text x="180" y="216" class="t">PO ROUNDING</text>
+<text x="180" y="234" class="s">#1 by count 39.5%</text>
+<text x="180" y="248" class="s">5th by cost</text>
+
+<rect x="320" y="196" width="136" height="72" class="b"/>
+<text x="332" y="216" class="t">VALIDATION</text>
+<text x="332" y="234" class="s">99.6% agreement</text>
+<text x="332" y="248" class="s">800 labelled</text>
+
+<rect x="472" y="196" width="136" height="72" class="b"/>
+<text x="484" y="216" class="t">UNCLASSIFIED</text>
+<text x="484" y="234" class="s">0.00% reported</text>
+<text x="484" y="248" class="s">tested below 3%</text>
+
+<rect x="16" y="296" width="608" height="36" class="b"/>
+<text x="28" y="318" class="s">24 TESTS · COSTS IN GBP, ANNUALISED FROM ONE QUARTER · SYNTHETIC DATA</text>
+</svg>

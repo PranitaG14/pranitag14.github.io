@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-03 provenance-gate schematic</title>
+<title>PN-08 provenance-gate schematic</title>
 <desc>Artifact bytes, signed attestation, offline TrustRoot and policy feed the verifier, which emits ACCEPT or REJECT with a reason code. In parallel, the artifact is compared with an independent rebuild.</desc>
 <defs>
 <pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
@@ -12,7 +12,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
 <g font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" letter-spacing="0.6" fill="#f8fafc" font-size="9">
 <rect x="0" y="0" width="640" height="28" fill="#020617" stroke="#f8fafc" stroke-opacity="0.4" stroke-width="1"/>
-<text x="16" y="18" font-size="10">PN-03 · PROVENANCE-GATE · ATTESTATION VERIFIER + REBUILD DIFF</text>
+<text x="16" y="18" font-size="10">PN-08 · PROVENANCE-GATE · ATTESTATION VERIFIER + REBUILD DIFF</text>
 
 <g stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" fill="#020617">
 <rect x="16" y="52" width="128" height="36"/>

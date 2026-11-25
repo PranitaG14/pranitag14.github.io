@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-01 claimsflow schematic</title>
+<desc>A synthetic motor-claims event log passes a data-quality gate, is aligned against the 11-step designed process, and known rework loops are counted and costed, alongside variants, waiting versus working time and recovery of planted rates.</desc>
+<defs>
+<pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
+<pattern id="G" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#f8fafc" stroke-opacity="0.09"/></pattern>
+<marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#60a5fa"/></marker>
+<marker id="l" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#f8fafc" fill-opacity="0.7"/></marker>
+<style>
+text{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:0.06em;fill:#f8fafc;text-transform:uppercase}
+.t{font-size:10px}
+.s{font-size:9px;fill-opacity:0.7}
+.h{font-size:9px;fill:#60a5fa}
+.b{fill:none;stroke:#f8fafc;stroke-opacity:0.6;stroke-width:1}
+.k{fill:none;stroke:#60a5fa;stroke-width:1}
+.w{stroke:#f8fafc;stroke-opacity:0.7;stroke-width:1;fill:none}
+</style>
+</defs>
+
+<rect width="640" height="360" fill="#020617"/>
+<rect width="640" height="360" fill="url(#g)"/>
+<rect width="640" height="360" fill="url(#G)"/>
+
+<rect x="16" y="16" width="608" height="28" class="b"/>
+<text x="28" y="34" class="t">PN-01 · CLAIMSFLOW · CLAIMS CONFORMANCE + REWORK COST</text>
+
+<rect x="16" y="72" width="136" height="72" class="b"/>
+<text x="28" y="92" class="t">EVENT LOG</text>
+<text x="28" y="110" class="s">50,000 claims</text>
+<text x="28" y="124" class="s">610,616 events</text>
+
+<rect x="168" y="72" width="136" height="72" class="b"/>
+<text x="180" y="92" class="t">DQ GATE</text>
+<text x="180" y="110" class="s">timestamps · dupes</text>
+<text x="180" y="124" class="h">PASS · 0 issues</text>
+
+<rect x="320" y="72" width="136" height="72" class="b"/>
+<text x="332" y="92" class="t">ALIGNMENT</text>
+<text x="332" y="110" class="s">vs 11-step design</text>
+<text x="332" y="124" class="s">fitness 0.920</text>
+
+<rect x="472" y="72" width="136" height="72" class="k"/>
+<text x="484" y="92" class="t">REWORK LOOPS</text>
+<text x="484" y="110" class="s">known candidates</text>
+<text x="484" y="124" class="s">ranked by cost</text>
+
+<path d="M152 108H166" class="w" marker-end="url(#l)"/>
+<path d="M304 108H318" class="w" marker-end="url(#l)"/>
+<path d="M456 108H470" class="w" marker-end="url(#l)"/>
+
+<path d="M540 144V172M84 172H540" class="k"/>
+<path d="M84 172V194" class="k" marker-end="url(#a)"/>
+<path d="M236 172V194" class="k" marker-end="url(#a)"/>
+<path d="M388 172V194" class="k" marker-end="url(#a)"/>
+<path d="M540 172V194" class="k" marker-end="url(#a)"/>
+
+<rect x="16" y="196" width="136" height="72" class="b"/>
+<text x="28" y="216" class="t">VARIANTS</text>
+<text x="28" y="234" class="s">40 distinct</text>
+<text x="28" y="248" class="s">65% on design path</text>
+
+<rect x="168" y="196" width="136" height="72" class="k"/>
+<text x="180" y="216" class="t">LOOP L3</text>
+<text x="180" y="234" class="s">22% of claims</text>
+<text x="180" y="248" class="h">GBP 3.39M / yr</text>
+
+<rect x="320" y="196" width="136" height="72" class="b"/>
+<text x="332" y="216" class="t">WAIT VS WORK</text>
+<text x="332" y="234" class="s">60% of elapsed</text>
+<text x="332" y="248" class="s">is waiting</text>
+
+<rect x="472" y="196" width="136" height="72" class="b"/>
+<text x="484" y="216" class="t">GROUND TRUTH</text>
+<text x="484" y="234" class="s">L3 0.219 = 0.219</text>
+<text x="484" y="248" class="s">planted rates</text>
+
+<rect x="16" y="296" width="608" height="36" class="b"/>
+<text x="28" y="318" class="s">TOTAL ANNUAL REWORK COST GBP 4,544,492 · SYNTHETIC LOG · STANDARD LIBRARY</text>
+</svg>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-01 pickpath offline pick reconciliation</title>
+<title>PN-06 pickpath offline pick reconciliation</title>
 <desc>Two picker offline queues drain in clientSeq order into a reservation ledger. The ledger applies valid picks to stock, recognises duplicates with no effect, or raises an exception task. A partition simulator induces double-picks. 500 contested SKUs, 0 silent losses, 500 exceptions.</desc>
 <style>
 .t{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:0.06em;fill:#f8fafc;text-transform:uppercase}
@@ -27,7 +27,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
 
 <rect x="16" y="16" width="608" height="28" fill="none" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1"/>
-<text class="t l" x="28" y="34">PN-01 · PICKPATH · OFFLINE PICK RECONCILIATION</text>
+<text class="t l" x="28" y="34">PN-06 · PICKPATH · OFFLINE PICK RECONCILIATION</text>
 
 <rect x="32" y="72" width="148" height="48" fill="#020617" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1"/>
 <text class="t l" x="44" y="92">OFFLINE QUEUE</text>

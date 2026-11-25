@@ -22,7 +22,7 @@
 <rect width="640" height="360" fill="url(#ma)"/>
 
 <rect x="16" y="16" width="608" height="24" fill="none" stroke="#f8fafc" stroke-opacity="0.4"/>
-<text x="28" y="32" class="t h">PN-02 · PREVIEWD · PR WEBHOOK TO NAMESPACE CONTROLLER</text>
+<text x="28" y="32" class="t h">PN-07 · PREVIEWD · PR WEBHOOK TO NAMESPACE CONTROLLER</text>
 
 <rect x="16" y="60" width="112" height="44" class="b"/>
 <text x="28" y="78" class="t">GITHUB</text>

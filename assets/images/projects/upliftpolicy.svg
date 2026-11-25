@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace">
-<title>PN-09 upliftpolicy schematic</title>
+<title>PN-14 upliftpolicy schematic</title>
 <desc>Pipeline: planted-effect generator feeds a train/evaluate study, uplift learners and cross-fitted nuisances, a top-k policy with guardrail, DM/IPW/DR/bootstrap/Qini evaluation, and a demo report. Readouts: +4.47% uplift-ranked, -0.23% churn-ranked, 3,000 evaluated customers.</desc>
 <defs>
 <pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
@@ -21,7 +21,7 @@
 
 <rect x="16" y="16" width="608" height="24" fill="#020617" stroke="#f8fafc" stroke-opacity="0.5" stroke-width="1"/>
 <g font-size="10" letter-spacing="0.6" fill="#f8fafc">
-<text x="28" y="32">PN-09 · UPLIFTPOLICY · UPLIFT TARGETING + DR POLICY EVALUATION</text>
+<text x="28" y="32">PN-14 · UPLIFTPOLICY · UPLIFT TARGETING + DR POLICY EVALUATION</text>
 </g>
 
 <g stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" fill="#020617">

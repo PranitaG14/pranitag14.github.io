@@ -1,6 +1,105 @@
 {
   "projects": [
     {
+      "name": "claimsflow",
+      "category": "Process mining",
+      "description": "Conformance checking on synthetic motor-claims event logs. It aligns every case against the designed 11-step process, counts known rework loops and costs each one in days and money.",
+      "highlights": [
+        "50,000 claims and 610,616 events: 40 variants, and only 65% of claims follow the designed path.",
+        "The costliest loop touches 22% of claims and adds 4.4 days; total rework comes to GBP 4.5M a year.",
+        "A data-quality gate runs first, and measured loop rates match the planted ground truth."
+      ],
+      "technologies": [
+        "Python",
+        "Conformance Checking",
+        "Process Mining",
+        "Event Logs"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/claimsflow"
+      },
+      "image": "assets/images/projects/claimsflow.svg"
+    },
+    {
+      "name": "p2pexceptions",
+      "category": "Procure-to-pay analytics",
+      "description": "Invoice exception analysis that assigns every failed three-way match exactly one cause, validates the assignment against labelled cases and ranks causes by cost.",
+      "highlights": [
+        "400,000 seeded invoice lines; 72,739 (18.2%) fail the PO, goods receipt and invoice match.",
+        "PO rounding is the top cause by count (39.5%) but fifth by cost; off-contract pricing leads by cost.",
+        "99.6% agreement with a labelled sample of 800, with unclassified exceptions always reported."
+      ],
+      "technologies": [
+        "Python",
+        "Procure-to-Pay",
+        "Pareto Analysis"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/p2pexceptions"
+      },
+      "image": "assets/images/projects/p2pexceptions.svg"
+    },
+    {
+      "name": "permitflow",
+      "category": "Workflow engine",
+      "description": "A municipal permit workflow where illegal state transitions are rejected by the database, not by a service layer that another code path could bypass.",
+      "highlights": [
+        "One statechart (11 states, 15 transitions, department SLAs) compiles into a transition table and triggers.",
+        "A raw INSERT that skips the service layer is rejected; all 95 illegal state pairs are refused.",
+        "Citizen-facing next-step text is generated from the same declaration, so it cannot drift."
+      ],
+      "technologies": [
+        "TypeScript",
+        "SQL",
+        "State Machines",
+        "Node.js"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/permitflow"
+      },
+      "image": "assets/images/projects/permitflow.svg"
+    },
+    {
+      "name": "fieldextract",
+      "category": "Document automation",
+      "description": "Document field extraction with per-field calibrated confidence, routed to human review at a cost-optimal threshold.",
+      "highlights": [
+        "Per-field isotonic calibration cuts expected calibration error 6x on held-out data.",
+        "Cost-derived thresholds spend the same 4,817 reviews for USD 18,518 instead of USD 32,896.",
+        "PII is redacted before any text reaches a model: 0 planted strings leaked across 500 documents."
+      ],
+      "technologies": [
+        "Python",
+        "IDP",
+        "Human-in-the-loop",
+        "JavaScript"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/fieldextract"
+      },
+      "image": "assets/images/projects/fieldextract.svg"
+    },
+    {
+      "name": "replayagent",
+      "category": "Durable execution",
+      "description": "A single-node durable execution runtime for LLM agents in the style of Temporal. Every LLM and tool call is recorded in an event-sourced SQLite history, so a crashed workflow resumes without repeating finished work.",
+      "highlights": [
+        "Retries with backoff, durable timers, human-in-the-loop signals and a versioning guard for in-flight workflows.",
+        "Real worker processes are killed at 8 crash points; a fresh worker resumes with identical results.",
+        "156 tests pass at 95% branch coverage, with zero runtime dependencies."
+      ],
+      "technologies": [
+        "Python",
+        "SQLite",
+        "LLM Agents",
+        "Event Sourcing"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/replayagent"
+      },
+      "image": "assets/images/projects/replayagent.svg"
+    },
+    {
       "name": "pickpath",
       "category": "Offline-first sync",
       "description": "An offline-first warehouse picking sync core. Conflicting picks that surface after pickers reconnect become supervisor exception tasks instead of being silently overwritten.",

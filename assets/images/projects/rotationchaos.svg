@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" letter-spacing="0.06em">
-<title>PN-05 rotationchaos schematic</title>
+<title>PN-10 rotationchaos schematic</title>
 <desc>Blueprint schematic: scenario catalogue drives run_scenario, which ticks a workload that rotates its SVID at half-TTL from a certificate authority. The trust bundle returns a named failure, then the authorization policy allows or denies, and the run result feeds the demo and tests.</desc>
 <defs>
 <pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse">
@@ -21,7 +21,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#mj)"/>
 
 <rect x="16" y="16" width="608" height="24" fill="#020617" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1"/>
-<text x="28" y="32" font-size="10" fill="#f8fafc">PN-05 · ROTATIONCHAOS · ROTATION PATH UNDER FAULT INJECTION</text>
+<text x="28" y="32" font-size="10" fill="#f8fafc">PN-10 · ROTATIONCHAOS · ROTATION PATH UNDER FAULT INJECTION</text>
 
 <g stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" fill="#020617">
 <rect x="16" y="70" width="124" height="52"/>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-04 fieldextract schematic</title>
+<desc>Claim documents are PII-redacted, fields are extracted with a score, scores are calibrated per field, and a cost-derived threshold sends each field to auto-approval or human review.</desc>
+<defs>
+<pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
+<pattern id="G" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#f8fafc" stroke-opacity="0.09"/></pattern>
+<marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#60a5fa"/></marker>
+<marker id="l" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#f8fafc" fill-opacity="0.7"/></marker>
+<style>
+text{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:0.06em;fill:#f8fafc;text-transform:uppercase}
+.t{font-size:10px}
+.s{font-size:9px;fill-opacity:0.7}
+.h{font-size:9px;fill:#60a5fa}
+.b{fill:none;stroke:#f8fafc;stroke-opacity:0.6;stroke-width:1}
+.k{fill:none;stroke:#60a5fa;stroke-width:1}
+.w{stroke:#f8fafc;stroke-opacity:0.7;stroke-width:1;fill:none}
+</style>
+</defs>
+
+<rect width="640" height="360" fill="#020617"/>
+<rect width="640" height="360" fill="url(#g)"/>
+<rect width="640" height="360" fill="url(#G)"/>
+
+<rect x="16" y="16" width="608" height="28" class="b"/>
+<text x="28" y="34" class="t">PN-04 · FIELDEXTRACT · CALIBRATED EXTRACTION + REVIEW ROUTING</text>
+
+<rect x="16" y="72" width="136" height="72" class="b"/>
+<text x="28" y="92" class="t">DOCUMENTS</text>
+<text x="28" y="110" class="s">invoices · police</text>
+<text x="28" y="124" class="s">medical summaries</text>
+
+<rect x="168" y="72" width="136" height="72" class="b"/>
+<text x="180" y="92" class="t">PII REDACTION</text>
+<text x="180" y="110" class="s">SSN · phone · card</text>
+<text x="180" y="124" class="h">0 leaks in 500</text>
+
+<rect x="320" y="72" width="136" height="72" class="b"/>
+<text x="332" y="92" class="t">EXTRACTOR</text>
+<text x="332" y="110" class="s">per-field score</text>
+<text x="332" y="124" class="s">abstain path</text>
+
+<rect x="472" y="72" width="136" height="72" class="k"/>
+<text x="484" y="92" class="t">CALIBRATION</text>
+<text x="484" y="110" class="s">isotonic · Platt</text>
+<text x="484" y="124" class="h">ECE 6.0x lower</text>
+
+<path d="M152 108H166" class="w" marker-end="url(#l)"/>
+<path d="M304 108H318" class="w" marker-end="url(#l)"/>
+<path d="M456 108H470" class="w" marker-end="url(#l)"/>
+
+<path d="M540 144V172M84 172H540" class="k"/>
+<path d="M84 172V194" class="k" marker-end="url(#a)"/>
+<path d="M236 172V194" class="k" marker-end="url(#a)"/>
+<path d="M388 172V194" class="k" marker-end="url(#a)"/>
+<path d="M540 172V194" class="k" marker-end="url(#a)"/>
+
+<rect x="16" y="196" width="136" height="72" class="b"/>
+<text x="28" y="216" class="t">THRESHOLD</text>
+<text x="28" y="234" class="s">1 − review cost</text>
+<text x="28" y="248" class="s">/ escape cost</text>
+
+<rect x="168" y="196" width="136" height="72" class="b"/>
+<text x="180" y="216" class="t">AUTO-APPROVE</text>
+<text x="180" y="234" class="s">43.8% of fields</text>
+<text x="180" y="248" class="s">at 1% target</text>
+
+<rect x="320" y="196" width="136" height="72" class="k"/>
+<text x="332" y="216" class="t">HUMAN REVIEW</text>
+<text x="332" y="234" class="s">below threshold</text>
+<text x="332" y="248" class="s">USD 2.50 a field</text>
+
+<rect x="472" y="196" width="136" height="72" class="b"/>
+<text x="484" y="216" class="t">TOTAL COST</text>
+<text x="484" y="234" class="h">USD 18,518</text>
+<text x="484" y="248" class="s">vs 32,896 global</text>
+
+<rect x="16" y="296" width="608" height="36" class="b"/>
+<text x="28" y="318" class="s">4,000 SEEDED DOCUMENTS · SIMULATED BACKEND · STANDARD LIBRARY ONLY</text>
+</svg>

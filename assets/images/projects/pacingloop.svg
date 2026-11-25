@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-08 pacingloop system schematic</title>
+<title>PN-13 pacingloop system schematic</title>
 <desc>A seeded simulator feeds a hour-of-week median and MAD baseline and a multi-signal classifier that emits explained alerts. A damped controller with a hard spend ceiling outputs spend, a multiplier trace and an audit log.</desc>
 <defs>
 <style>.m{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:.06em;fill:#f8fafc}.h{font-size:10px}.s{font-size:9px;fill-opacity:.7}.v{font-size:14px;fill:#60a5fa}</style>
@@ -12,7 +12,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
 <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
 <rect x="16" y="16" width="608" height="24" fill="none" stroke="#f8fafc" stroke-opacity="0.4" stroke-width="1"/>
-<text class="m h" x="28" y="32">PN-08 · PACINGLOOP · ROBUST BASELINE + DAMPED CONTROL</text>
+<text class="m h" x="28" y="32">PN-13 · PACINGLOOP · ROBUST BASELINE + DAMPED CONTROL</text>
 
 <rect class="readout" x="32" y="72" width="136" height="36" fill="#020617" stroke="#60a5fa" stroke-width="1"/>
 <text class="m v" x="44" y="90">4/4</text>

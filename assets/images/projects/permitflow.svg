@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-03 permitflow schematic</title>
+<desc>A permit statechart declared in TypeScript is compiled into a transition table and triggers, so the database accepts legal moves, rejects a raw-SQL bypass and every illegal pair, and citizen next-step copy comes from the same declaration.</desc>
+<defs>
+<pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
+<pattern id="G" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#f8fafc" stroke-opacity="0.09"/></pattern>
+<marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#60a5fa"/></marker>
+<marker id="l" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#f8fafc" fill-opacity="0.7"/></marker>
+<style>
+text{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:0.06em;fill:#f8fafc;text-transform:uppercase}
+.t{font-size:10px}
+.s{font-size:9px;fill-opacity:0.7}
+.h{font-size:9px;fill:#60a5fa}
+.b{fill:none;stroke:#f8fafc;stroke-opacity:0.6;stroke-width:1}
+.k{fill:none;stroke:#60a5fa;stroke-width:1}
+.w{stroke:#f8fafc;stroke-opacity:0.7;stroke-width:1;fill:none}
+</style>
+</defs>
+
+<rect width="640" height="360" fill="#020617"/>
+<rect width="640" height="360" fill="url(#g)"/>
+<rect width="640" height="360" fill="url(#G)"/>
+
+<rect x="16" y="16" width="608" height="28" class="b"/>
+<text x="28" y="34" class="t">PN-03 · PERMITFLOW · STATECHART COMPILED INTO THE DATABASE</text>
+
+<rect x="16" y="72" width="136" height="72" class="b"/>
+<text x="28" y="92" class="t">MACHINE.TS</text>
+<text x="28" y="110" class="s">11 states</text>
+<text x="28" y="124" class="s">15 transitions</text>
+
+<rect x="168" y="72" width="136" height="72" class="b"/>
+<text x="180" y="92" class="t">COMPILE.TS</text>
+<text x="180" y="110" class="s">statechart → SQL</text>
+<text x="180" y="124" class="s">one declaration</text>
+
+<rect x="320" y="72" width="136" height="72" class="b"/>
+<text x="332" y="92" class="t">TRANSITIONS</text>
+<text x="332" y="110" class="s">legal edges</text>
+<text x="332" y="124" class="s">held as data</text>
+
+<rect x="472" y="72" width="136" height="72" class="k"/>
+<text x="484" y="92" class="t">TRIGGERS</text>
+<text x="484" y="110" class="s">reject bad edges</text>
+<text x="484" y="124" class="s">history append-only</text>
+
+<path d="M152 108H166" class="w" marker-end="url(#l)"/>
+<path d="M304 108H318" class="w" marker-end="url(#l)"/>
+<path d="M456 108H470" class="w" marker-end="url(#l)"/>
+
+<path d="M540 144V172M84 172H540" class="k"/>
+<path d="M84 172V194" class="k" marker-end="url(#a)"/>
+<path d="M236 172V194" class="k" marker-end="url(#a)"/>
+<path d="M388 172V194" class="k" marker-end="url(#a)"/>
+<path d="M540 172V194" class="k" marker-end="url(#a)"/>
+
+<rect x="16" y="196" width="136" height="72" class="b"/>
+<text x="28" y="216" class="t">LEGAL PATH</text>
+<text x="28" y="234" class="s">DRAFT → SUBMITTED</text>
+<text x="28" y="248" class="s">→ … → APPROVED</text>
+
+<rect x="168" y="196" width="136" height="72" class="k"/>
+<text x="180" y="216" class="t">RAW INSERT</text>
+<text x="180" y="234" class="s">DRAFT → ISSUED</text>
+<text x="180" y="248" class="h">rejected by DB</text>
+
+<rect x="320" y="196" width="136" height="72" class="b"/>
+<text x="332" y="216" class="t">SWEEP</text>
+<text x="332" y="234" class="s">95 illegal pairs</text>
+<text x="332" y="248" class="h">95 rejected</text>
+
+<rect x="472" y="196" width="136" height="72" class="b"/>
+<text x="484" y="216" class="t">NEXT STEPS</text>
+<text x="484" y="234" class="s">citizen copy from</text>
+<text x="484" y="248" class="s">same declaration</text>
+
+<rect x="16" y="296" width="608" height="36" class="b"/>
+<text x="28" y="318" class="s">TYPESCRIPT · SQL TRIGGERS · DEPARTMENT SLAS IN DAYS · BROWSER LAB</text>
+</svg>

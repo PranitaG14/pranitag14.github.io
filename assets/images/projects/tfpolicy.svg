@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-06 tfpolicy schematic</title>
+<title>PN-11 tfpolicy schematic</title>
 <desc>Terraform plan JSON enters a rule engine with policy YAML and five rules. The engine produces a report grouped by resource, which feeds an exit gate that returns 1 on FAIL.</desc>
 <defs>
 <pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
@@ -21,7 +21,7 @@ text{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spac
 <rect width="640" height="360" fill="url(#G)"/>
 
 <rect x="16" y="16" width="608" height="28" class="b"/>
-<text x="28" y="34" class="t">PN-06 · TFPOLICY · PLAN POLICY LINTER</text>
+<text x="28" y="34" class="t">PN-11 · TFPOLICY · PLAN POLICY LINTER</text>
 
 <rect x="448" y="60" width="44" height="40" class="k"/>
 <text x="470" y="80" class="n" text-anchor="middle">5</text>
