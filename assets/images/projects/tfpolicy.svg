@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-06 tfpolicy schematic</title>
+<desc>Terraform plan JSON enters a rule engine with policy YAML and five rules. The engine produces a report grouped by resource, which feeds an exit gate that returns 1 on FAIL.</desc>
+<defs>
+<pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
+<pattern id="G" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#f8fafc" stroke-opacity="0.09"/></pattern>
+<marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#60a5fa"/></marker>
+<marker id="l" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#f8fafc" fill-opacity="0.7"/></marker>
+<style>
+text{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:0.06em;fill:#f8fafc;text-transform:uppercase}
+.t{font-size:10px}
+.s{font-size:9px;fill-opacity:0.7}
+.n{font-size:16px;fill:#60a5fa}
+.b{fill:none;stroke:#f8fafc;stroke-opacity:0.6;stroke-width:1}
+.k{fill:none;stroke:#60a5fa;stroke-width:1}
+</style>
+</defs>
+
+<rect width="640" height="360" fill="#020617"/>
+<rect width="640" height="360" fill="url(#g)"/>
+<rect width="640" height="360" fill="url(#G)"/>
+
+<rect x="16" y="16" width="608" height="28" class="b"/>
+<text x="28" y="34" class="t">PN-06 · TFPOLICY · PLAN POLICY LINTER</text>
+
+<rect x="448" y="60" width="44" height="40" class="k"/>
+<text x="470" y="80" class="n" text-anchor="middle">5</text>
+<text x="470" y="93" class="s" text-anchor="middle">RULES</text>
+<rect x="496" y="60" width="80" height="40" class="k"/>
+<text x="536" y="80" class="n" text-anchor="middle">8</text>
+<text x="536" y="93" class="s" text-anchor="middle">VIOLATIONS</text>
+<rect x="580" y="60" width="44" height="40" class="k"/>
+<text x="602" y="80" class="n" text-anchor="middle">1</text>
+<text x="602" y="93" class="s" text-anchor="middle">EXIT</text>
+
+<rect x="216" y="60" width="150" height="44" class="b"/>
+<text x="226" y="78" class="t">POLICY.YAML</text>
+<text x="226" y="93" class="s">severity · options</text>
+
+<rect x="16" y="150" width="130" height="60" class="b"/>
+<text x="26" y="176" class="t">PLAN.JSON</text>
+<text x="26" y="192" class="s">show -json</text>
+
+<rect x="216" y="150" width="150" height="60" class="k"/>
+<text x="226" y="176" class="t">RULE ENGINE</text>
+<text x="226" y="192" class="s">evaluate per resource</text>
+
+<rect x="216" y="248" width="150" height="88" class="b"/>
+<text x="226" y="264" class="t">RULES (5)</text>
+<text x="226" y="277" class="s">s3_public_access</text>
+<text x="226" y="289" class="s">sg_open_ingress</text>
+<text x="226" y="301" class="s">required_tags</text>
+<text x="226" y="313" class="s">iam_wildcard</text>
+<text x="226" y="325" class="s">instance_type_allowlist</text>
+
+<rect x="448" y="150" width="176" height="60" class="b"/>
+<text x="458" y="176" class="t">REPORT</text>
+<text x="458" y="192" class="s">text | json · by resource</text>
+
+<rect x="448" y="248" width="176" height="88" class="b"/>
+<text x="458" y="264" class="t">EXIT GATE</text>
+<text x="458" y="280" class="s">PASS → 0</text>
+<text x="458" y="294" class="s">FAIL → 1</text>
+<text x="458" y="308" class="s">CI blocks apply</text>
+
+<path d="M146 180H216" class="k" marker-end="url(#a)"/>
+<path d="M366 180H448" class="k" marker-end="url(#a)"/>
+<path d="M291 104V150" stroke="#f8fafc" stroke-opacity="0.7" stroke-width="1" marker-end="url(#l)"/>
+<path d="M291 248V210" stroke="#f8fafc" stroke-opacity="0.7" stroke-width="1" marker-end="url(#l)"/>
+<path d="M536 210V248" stroke="#f8fafc" stroke-opacity="0.7" stroke-width="1" marker-end="url(#l)"/>
+<text x="372" y="170" class="s">violations[]</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-01 pickpath offline pick reconciliation</title>
+<desc>Two picker offline queues drain in clientSeq order into a reservation ledger. The ledger applies valid picks to stock, recognises duplicates with no effect, or raises an exception task. A partition simulator induces double-picks. 500 contested SKUs, 0 silent losses, 500 exceptions.</desc>
+<style>
+.t{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:0.06em;fill:#f8fafc;text-transform:uppercase}
+.l{font-size:10px}
+.s{font-size:9px;fill-opacity:0.7}
+.n{font-size:11px;fill:#60a5fa}
+</style>
+<defs>
+<pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05" stroke-width="1"/>
+</pattern>
+<pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M80 0H0V80" fill="none" stroke="#f8fafc" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L10 5L0 10z" fill="#f8fafc" fill-opacity="0.7"/>
+</marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L10 5L0 10z" fill="#60a5fa"/>
+</marker>
+</defs>
+
+<rect x="0" y="0" width="640" height="360" fill="#020617"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+
+<rect x="16" y="16" width="608" height="28" fill="none" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1"/>
+<text class="t l" x="28" y="34">PN-01 · PICKPATH · OFFLINE PICK RECONCILIATION</text>
+
+<rect x="32" y="72" width="148" height="48" fill="#020617" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1"/>
+<text class="t l" x="44" y="92">OFFLINE QUEUE</text>
+<text class="t s" x="44" y="108">PICKER A · clientSeq</text>
+
+<rect x="32" y="136" width="148" height="48" fill="#020617" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1"/>
+<text class="t l" x="44" y="156">OFFLINE QUEUE</text>
+<text class="t s" x="44" y="172">PICKER B · clientSeq</text>
+
+<rect x="32" y="224" width="148" height="44" fill="none" stroke="#f8fafc" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4 3"/>
+<text class="t l" x="44" y="242">PARTITION SIM</text>
+<text class="t s" x="44" y="258">induces double-picks</text>
+
+<rect x="236" y="104" width="160" height="92" fill="#020617" stroke="#60a5fa" stroke-width="1"/>
+<text class="t l" x="248" y="140">RESERVATION LEDGER</text>
+<text class="t s" x="248" y="162">apply() · idempotent</text>
+<text class="t s" x="248" y="180">keyed by pickerId, clientSeq</text>
+
+<rect x="440" y="72" width="168" height="44" fill="#020617" stroke="#60a5fa" stroke-width="1"/>
+<text class="t l" x="452" y="90">STOCK + RESERVATIONS</text>
+<text class="t s" x="452" y="106">valid · decrement</text>
+
+<rect x="440" y="136" width="168" height="40" fill="#020617" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1"/>
+<text class="t l" x="452" y="154">DUPLICATE</text>
+<text class="t s" x="452" y="168">no effect</text>
+
+<rect x="440" y="196" width="168" height="44" fill="#020617" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1"/>
+<text class="t l" x="452" y="214">EXCEPTION TASK</text>
+<text class="t s" x="452" y="230">for supervisor</text>
+
+<line x1="180" y1="96" x2="236" y2="124" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="180" y1="160" x2="236" y2="172" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="106" y1="224" x2="106" y2="186" stroke="#f8fafc" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#ah)"/>
+<line x1="396" y1="128" x2="440" y2="94" stroke="#60a5fa" stroke-width="1" marker-end="url(#ahb)"/>
+<line x1="396" y1="150" x2="440" y2="156" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="396" y1="172" x2="440" y2="216" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" marker-end="url(#ah)"/>
+
+<rect x="32" y="290" width="176" height="46" fill="none" stroke="#60a5fa" stroke-width="1"/>
+<text class="t n" x="120" y="308" text-anchor="middle">500</text>
+<text class="t s" x="120" y="324" text-anchor="middle">contested SKUs</text>
+
+<rect x="232" y="290" width="176" height="46" fill="none" stroke="#60a5fa" stroke-width="1"/>
+<text class="t n" x="320" y="308" text-anchor="middle">0</text>
+<text class="t s" x="320" y="324" text-anchor="middle">silent losses</text>
+
+<rect x="432" y="290" width="176" height="46" fill="none" stroke="#60a5fa" stroke-width="1"/>
+<text class="t n" x="520" y="308" text-anchor="middle">500</text>
+<text class="t s" x="520" y="324" text-anchor="middle">exceptions</text>
+</svg>

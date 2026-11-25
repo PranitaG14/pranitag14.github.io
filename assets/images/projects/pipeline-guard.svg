@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-04 pipeline-guard schematic</title>
+<desc>A pull request fans out to Trivy and Dockerfile, Terraform plan and Kubernetes manifest scanners. An aggregator computes a severity-weighted score, and a gate compares it to the threshold: merge allowed, or merge blocked with a PR comment. An auto-fix branch is also produced.</desc>
+<defs>
+<style>
+.t{font-family:"IBM Plex Mono,SFMono-Regular,Consolas,monospace";font-size:9px;letter-spacing:.06em;fill:#f8fafc;text-anchor:middle}
+.h{font-family:"IBM Plex Mono,SFMono-Regular,Consolas,monospace";font-size:10px;letter-spacing:.06em;fill:#f8fafc}
+.s{fill-opacity:.7}
+.b{fill:#020617;stroke:#f8fafc;stroke-opacity:.6;stroke-width:1}
+.k{stroke:#60a5fa;stroke-width:1.5}
+.ac{fill:#60a5fa}
+</style>
+<pattern id="m" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
+<pattern id="M" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#f8fafc" stroke-opacity="0.09"/></pattern>
+<marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#f8fafc" fill-opacity="0.7"/></marker>
+<marker id="c" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#60a5fa"/></marker>
+</defs>
+
+<rect width="640" height="360" fill="#020617"/>
+<rect width="640" height="360" fill="url(#m)"/>
+<rect width="640" height="360" fill="url(#M)"/>
+
+<rect x="0" y="0" width="640" height="28" fill="#020617" stroke="#f8fafc" stroke-opacity="0.4"/>
+<text class="h" x="16" y="18">PN-04 &#183; PIPELINE-GUARD &#183; SHIFT-LEFT SECURITY GATE</text>
+
+<g fill="none" stroke="#f8fafc" stroke-opacity="0.6">
+<path d="M112 175 C128 175 132 85 150 85" marker-end="url(#a)"/>
+<path d="M112 175 H150" marker-end="url(#a)"/>
+<path d="M112 175 C128 175 132 265 150 265" marker-end="url(#a)"/>
+<path d="M300 85 C320 85 320 165 340 165" marker-end="url(#a)"/>
+<path d="M300 175 H340" marker-end="url(#a)"/>
+<path d="M300 265 C320 265 320 185 340 185" marker-end="url(#a)"/>
+<path d="M400 104 V150" stroke-dasharray="3 3" marker-end="url(#a)"/>
+<path d="M460 175 H484" marker-end="url(#a)"/>
+<path d="M530 150 V104" marker-end="url(#a)"/>
+<path d="M400 200 V246" marker-end="url(#a)"/>
+</g>
+<path class="k" fill="none" d="M530 200 V246" marker-end="url(#c)"/>
+
+<rect class="b" x="16" y="150" width="96" height="50"/>
+<text class="t" x="64" y="171">PULL</text>
+<text class="t" x="64" y="184">REQUEST</text>
+
+<rect class="b" x="150" y="60" width="150" height="50"/>
+<text class="t" x="225" y="81">TRIVY IMAGE +</text>
+<text class="t" x="225" y="94">DOCKERFILE BASE</text>
+
+<rect class="b" x="150" y="150" width="150" height="50"/>
+<text class="t" x="225" y="171">TERRAFORM PLAN</text>
+<text class="t" x="225" y="184">POLICY CHECKS</text>
+
+<rect class="b" x="150" y="240" width="150" height="50"/>
+<text class="t" x="225" y="261">K8S MANIFEST</text>
+<text class="t" x="225" y="274">POLICY CHECKS</text>
+
+<rect class="b" x="340" y="60" width="120" height="44"/>
+<text class="t" x="400" y="78">POLICIES +</text>
+<text class="t" x="400" y="91">THRESHOLD</text>
+
+<rect class="b" x="340" y="150" width="120" height="50"/>
+<text class="t" x="400" y="171">AGGREGATOR</text>
+<text class="t" x="400" y="184">WEIGHTED SCORE</text>
+
+<rect class="b" x="484" y="150" width="92" height="50" stroke="#60a5fa" stroke-width="1.5"/>
+<text class="t" x="530" y="171">GATE</text>
+<text class="t" x="530" y="184">&#8804; THRESHOLD</text>
+
+<rect class="b" x="470" y="64" width="120" height="40"/>
+<text class="t" x="530" y="88">MERGE ALLOWED</text>
+
+<rect class="b" x="470" y="246" width="120" height="50" stroke="#60a5fa" stroke-width="1.5"/>
+<text class="t" x="530" y="267">MERGE BLOCKED</text>
+<text class="t" x="530" y="280">+ PR COMMENT</text>
+
+<rect class="b" x="340" y="246" width="120" height="50"/>
+<text class="t" x="400" y="267">AUTO-FIX BRANCH</text>
+<text class="t" x="400" y="280">MECHANICAL ONLY</text>
+
+<text class="t s" x="538" y="130" style="text-anchor:start">PASS</text>
+<text class="t ac" x="538" y="228" style="text-anchor:start">FAIL</text>
+
+<rect class="b" x="16" y="308" width="192" height="32"/>
+<text class="h s" x="28" y="327">RISK SCORE</text>
+<text class="h ac" x="196" y="327" style="text-anchor:end;font-size:11px">179</text>
+
+<rect class="b" x="224" y="308" width="192" height="32"/>
+<text class="h s" x="236" y="327">THRESHOLD</text>
+<text class="h ac" x="404" y="327" style="text-anchor:end;font-size:11px">30</text>
+
+<rect class="b" x="432" y="308" width="192" height="32"/>
+<text class="h s" x="444" y="327">AUTO-FIXABLE</text>
+<text class="h ac" x="612" y="327" style="text-anchor:end;font-size:11px">7</text>
+</svg>

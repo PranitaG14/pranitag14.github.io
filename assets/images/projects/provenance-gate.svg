@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-03 provenance-gate schematic</title>
+<desc>Artifact bytes, signed attestation, offline TrustRoot and policy feed the verifier, which emits ACCEPT or REJECT with a reason code. In parallel, the artifact is compared with an independent rebuild.</desc>
+<defs>
+<pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
+<pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#f8fafc" stroke-opacity="0.09"/></pattern>
+<marker id="ah" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#f8fafc" fill-opacity="0.7"/></marker>
+<marker id="ahb" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#60a5fa"/></marker>
+</defs>
+<rect x="0" y="0" width="640" height="360" fill="#020617"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+<g font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" letter-spacing="0.6" fill="#f8fafc" font-size="9">
+<rect x="0" y="0" width="640" height="28" fill="#020617" stroke="#f8fafc" stroke-opacity="0.4" stroke-width="1"/>
+<text x="16" y="18" font-size="10">PN-03 · PROVENANCE-GATE · ATTESTATION VERIFIER + REBUILD DIFF</text>
+
+<g stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" fill="#020617">
+<rect x="16" y="52" width="128" height="36"/>
+<rect x="16" y="104" width="128" height="36"/>
+<rect x="16" y="156" width="128" height="36"/>
+<rect x="16" y="208" width="128" height="36"/>
+<rect x="16" y="272" width="128" height="36"/>
+<rect x="200" y="52" width="168" height="190"/>
+<rect x="200" y="268" width="168" height="44"/>
+<rect x="416" y="268" width="208" height="44"/>
+<rect x="416" y="52" width="208" height="70" stroke="#60a5fa" stroke-opacity="0.8"/>
+<rect x="416" y="146" width="100" height="50" stroke="#60a5fa" stroke-opacity="0.8"/>
+<rect x="528" y="146" width="96" height="50" stroke="#60a5fa" stroke-opacity="0.8"/>
+</g>
+
+<text x="80" y="74" text-anchor="middle">ARTIFACT BYTES</text>
+<text x="80" y="126" text-anchor="middle">SIGNED ATTESTATION</text>
+<text x="80" y="178" text-anchor="middle">TRUSTROOT (OFFLINE)</text>
+<text x="80" y="230" text-anchor="middle">POLICY ALLOW-LISTS</text>
+<text x="80" y="294" text-anchor="middle">INDEPENDENT BUILD</text>
+
+<text x="284" y="76" text-anchor="middle" font-size="10">VERIFIER</text>
+<text x="284" y="92" text-anchor="middle" fill-opacity="0.7">src/attest.py</text>
+<text x="216" y="124">1 AUTHENTICATE SIGNATURE</text>
+<text x="216" y="146">2 BIND ARTIFACT DIGEST</text>
+<text x="216" y="168">3 APPLY POLICY</text>
+<text x="216" y="190">4 REJECT REPLAYS</text>
+<text x="216" y="212">5 EMIT REASON CODE</text>
+
+<text x="284" y="288" text-anchor="middle" font-size="10">REBUILD + COMPARE</text>
+<text x="284" y="302" text-anchor="middle" fill-opacity="0.7">src/rebuild.py</text>
+
+<text x="424" y="72" fill-opacity="0.7">DECISION</text>
+<text x="424" y="93" font-size="11" fill="#60a5fa">ACCEPT / REJECT</text>
+<text x="424" y="112">+ REASON CODE</text>
+
+<text x="424" y="288">REPRODUCIBLE?</text>
+<text x="424" y="302" fill-opacity="0.7">NOT_REPRODUCIBLE</text>
+
+<text x="466" y="168" text-anchor="middle" font-size="11" fill="#60a5fa">9</text>
+<text x="466" y="186" text-anchor="middle" fill-opacity="0.7">REASON CODES</text>
+<text x="576" y="168" text-anchor="middle" font-size="11" fill="#60a5fa">19</text>
+<text x="576" y="186" text-anchor="middle" fill-opacity="0.7">TESTS</text>
+
+<text x="16" y="334" fill-opacity="0.7">SIGNATURE + POLICY PASS ON A COMPROMISED RUNNER; ONLY THE REBUILD EXPOSES IT</text>
+</g>
+
+<g fill="none" stroke-width="1">
+<path d="M144 70H200" stroke="#60a5fa" marker-end="url(#ahb)"/>
+<path d="M144 122H200" stroke="#f8fafc" stroke-opacity="0.6" marker-end="url(#ah)"/>
+<path d="M144 174H200" stroke="#f8fafc" stroke-opacity="0.6" marker-end="url(#ah)"/>
+<path d="M144 226H200" stroke="#f8fafc" stroke-opacity="0.6" marker-end="url(#ah)"/>
+<path d="M144 290H200" stroke="#f8fafc" stroke-opacity="0.6" marker-end="url(#ah)"/>
+<path d="M184 70V290H200" stroke="#f8fafc" stroke-opacity="0.6" stroke-dasharray="3 3"/>
+<path d="M368 87H416" stroke="#60a5fa" marker-end="url(#ahb)"/>
+<path d="M368 290H416" stroke="#f8fafc" stroke-opacity="0.6" marker-end="url(#ah)"/>
+</g>
+<circle cx="184" cy="70" r="2" fill="#60a5fa"/>
+</svg>

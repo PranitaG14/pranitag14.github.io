@@ -1,0 +1,51 @@
+{
+  "name": "Pranita Ashok Ghebad",
+  "title": "Senior Automation Developer: BPM and backend workflow systems",
+  "summary": "8 years driving operational efficiency through end-to-end BPM solutions across finance and manufacturing, using Appian, Camunda, Flowable and n8n. My proof-of-concept work has helped win multimillion-dollar projects.",
+  "location": "Dallas, TX",
+  "photo": {
+    "src": "assets/images/pranita-ghebad.jpg",
+    "alt": "Portrait of Pranita Ashok Ghebad"
+  },
+  "readouts": [
+    {
+      "value": "8 yrs",
+      "label": "building BPM and automation solutions"
+    },
+    {
+      "value": "~35%",
+      "label": "less manual loan processing at TCS"
+    },
+    {
+      "value": "60%",
+      "label": "less manual effort at UB CLOE"
+    },
+    {
+      "value": "40–60%",
+      "label": "less manual monitoring at CloudNuro"
+    }
+  ],
+  "ctas": [
+    {
+      "label": "View projects",
+      "href": "#projects",
+      "kind": "primary"
+    },
+    {
+      "label": "Résumé",
+      "href": "assets/files/pranita-ghebad-resume.pdf",
+      "kind": "resume"
+    },
+    {
+      "label": "Get in touch",
+      "href": "#contact",
+      "kind": "secondary"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/PranitaG14",
+    "website": "https://pranitaghebad.netlify.app/",
+    "email": "paghebad@gmail.com",
+    "phone": "+1 (848) 391-3943"
+  }
+}

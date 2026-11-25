@@ -1,0 +1,227 @@
+{
+  "projects": [
+    {
+      "name": "pickpath",
+      "category": "Offline-first sync",
+      "description": "An offline-first warehouse picking sync core. Conflicting picks that surface after pickers reconnect become supervisor exception tasks instead of being silently overwritten.",
+      "highlights": [
+        "500 induced double-picks produce zero silent losses and exactly one exception task each.",
+        "A last-write-wins baseline silently loses all 500 picks in the same simulation."
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "GitHub Actions",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/pickpath"
+      },
+      "image": "assets/images/projects/pickpath.svg",
+      "hero": {
+        "src": "assets/images/projects/pickpath-hero.jpg",
+        "alt": "pickpath — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "previewd",
+      "category": "Kubernetes operator",
+      "description": "A Kubernetes controller that builds an ephemeral preview namespace per pull request from signed GitHub-format webhooks. It garbage-collects on close or TTL expiry.",
+      "highlights": [
+        "Tested against a real kube-apiserver with envtest and a fake GitHub API.",
+        "The webhook path only records desired state; a pure-function state machine decides every action."
+      ],
+      "technologies": [
+        "Go",
+        "controller-runtime",
+        "Kubernetes",
+        "envtest",
+        "Prometheus"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/previewd"
+      },
+      "image": "assets/images/projects/previewd.svg",
+      "hero": {
+        "src": "assets/images/projects/previewd-hero.jpg",
+        "alt": "previewd — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "provenance-gate",
+      "category": "Supply-chain security",
+      "description": "A SLSA provenance verifier that checks signed attestations against policy, then rebuilds the artifact and diffs it. This proves the binary came from the reviewed source.",
+      "highlights": [
+        "Rejects with 9 specific reason codes, from DIGEST_MISMATCH to NOT_REPRODUCIBLE.",
+        "Catches a compromised runner whose attestation is correctly signed and policy-compliant."
+      ],
+      "technologies": [
+        "Python",
+        "SLSA",
+        "in-toto",
+        "HMAC-SHA256",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/provenance-gate"
+      },
+      "image": "assets/images/projects/provenance-gate.svg",
+      "hero": {
+        "src": "assets/images/projects/provenance-gate-hero.jpg",
+        "alt": "provenance-gate — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "pipeline-guard",
+      "category": "CI security gate",
+      "description": "A reusable GitHub Action and CLI that gates pull requests on container-image vulnerabilities and IaC misconfigurations with a severity-weighted risk score.",
+      "highlights": [
+        "On the vulnerable fixtures it scores 179 against a threshold of 30 across 21 findings and blocks the merge.",
+        "7 of those 21 findings are mechanically fixable by the auto-fix planner."
+      ],
+      "technologies": [
+        "Python",
+        "GitHub Actions",
+        "Trivy",
+        "Terraform",
+        "Kubernetes",
+        "Rego"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/pipeline-guard"
+      },
+      "image": "assets/images/projects/pipeline-guard.svg",
+      "hero": {
+        "src": "assets/images/projects/pipeline-guard-hero.jpg",
+        "alt": "pipeline-guard — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "rotationchaos",
+      "category": "Workload identity",
+      "description": "A workload-identity lab that issues SPIFFE-style certificates with 60-second lifetimes and injects rotation failures. Every failure is asserted to fail closed.",
+      "highlights": [
+        "Steady state: 50,000 requests, 1,666 rotations and 0 failures.",
+        "All 8 failure scenarios deny requests and fail closed."
+      ],
+      "technologies": [
+        "Python",
+        "SPIFFE",
+        "mTLS",
+        "HMAC-SHA256"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/rotationchaos"
+      },
+      "image": "assets/images/projects/rotationchaos.svg",
+      "hero": {
+        "src": "assets/images/projects/rotationchaos-hero.jpg",
+        "alt": "rotationchaos — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "tfpolicy",
+      "category": "Infrastructure policy",
+      "description": "A Terraform plan policy linter that catches public buckets, world-open ports and wildcard-admin IAM before apply. It exits non-zero on any FAIL-severity violation.",
+      "highlights": [
+        "Runs purely on plan JSON: no cloud credentials or Terraform binary at evaluation time.",
+        "On the bundled bad fixture it reports 8 violations (7 fail, 1 warn) and exits 1."
+      ],
+      "technologies": [
+        "Python",
+        "Terraform",
+        "uv",
+        "YAML",
+        "CI/CD"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/tfpolicy"
+      },
+      "image": "assets/images/projects/tfpolicy.svg",
+      "hero": {
+        "src": "assets/images/projects/tfpolicy-hero.jpg",
+        "alt": "tfpolicy — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "kube-rightsizer",
+      "category": "Kubernetes cost tooling",
+      "description": "Right-sizes Kubernetes workloads from real Prometheus usage history by opening a reviewable GitHub pull request against a GitOps manifests repo. It never mutates live objects.",
+      "highlights": [
+        "Per-container recommendations from p95 usage plus 15% default headroom, with min/max clamps.",
+        "Surgical YAML patching that changes only resources.requests and resources.limits."
+      ],
+      "technologies": [
+        "Go",
+        "Kubernetes",
+        "kubebuilder",
+        "Prometheus",
+        "Helm",
+        "GitHub API"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/kube-rightsizer"
+      },
+      "image": "assets/images/projects/kube-rightsizer.svg",
+      "hero": {
+        "src": "assets/images/projects/kube-rightsizer-hero.jpg",
+        "alt": "kube-rightsizer — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "pacingloop",
+      "category": "Anomaly detection and control",
+      "description": "Real-time campaign pacing with hour-of-week median/MAD baselines and a damped, rate-limited controller. A hard spend ceiling is enforced outside the controller.",
+      "highlights": [
+        "In the seeded simulator, 4 of 4 planted incidents are detected and classified, with 0.00 false alarms per week.",
+        "The damped controller makes 279 adjustments against 488 for a naive proportional one."
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "GitHub Actions",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/pacingloop"
+      },
+      "image": "assets/images/projects/pacingloop.svg",
+      "hero": {
+        "src": "assets/images/projects/pacingloop-hero.jpg",
+        "alt": "pacingloop — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "upliftpolicy",
+      "category": "Decision analytics",
+      "description": "Retention targeting by uplift rather than churn propensity, evaluated with Qini curves and doubly-robust off-policy estimators. It surfaces the customers that contact drives away.",
+      "highlights": [
+        "The top 30% by uplift adds 4.47 points of retention; the top 30% by churn score loses 0.23.",
+        "Sleeping dogs are 37% of the churn-ranked list and 4% of the uplift-ranked list."
+      ],
+      "technologies": [
+        "Python",
+        "Logistic regression (IRLS)",
+        "Bootstrap CIs",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/PranitaG14/upliftpolicy"
+      },
+      "image": "assets/images/projects/upliftpolicy.svg",
+      "hero": {
+        "src": "assets/images/projects/upliftpolicy-hero.jpg",
+        "alt": "upliftpolicy — Concept render",
+        "caption": "Concept render"
+      }
+    }
+  ]
+}

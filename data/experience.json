@@ -1,0 +1,114 @@
+{
+  "roles": [
+    {
+      "company": "CloudNuro",
+      "logo": "assets/images/logos/cloudnuro.png",
+      "title": "Lead Engineer",
+      "start": "Nov 2025",
+      "end": "Present",
+      "location": "USA",
+      "highlights": [
+        "Led design and implementation of employee lifecycle automation in n8n: event-driven onboarding and offboarding workflows integrating HR systems, identity providers and core SaaS applications.",
+        "Built a scalable FinOps alerts and notifications feature in Python and Firebase that detects anomalies and usage threshold breaches across IaaS/SaaS applications.",
+        "Enabled proactive customer notifications, reducing manual monitoring effort by 40–60%."
+      ],
+      "technologies": [
+        "n8n",
+        "Python",
+        "Firebase"
+      ]
+    },
+    {
+      "company": "Holiday Channel",
+      "logo": "assets/images/logos/holiday-channel.svg",
+      "title": "Engineering Manager Intern",
+      "start": "Aug 2025",
+      "end": "Oct 2025",
+      "location": "USA",
+      "highlights": [
+        "Led 2 cross-functional engineering teams in designing and launching the Holiday Channel platform.",
+        "Established Agile delivery frameworks and best practices.",
+        "Produced architecture diagrams, system design briefs and API documentation to keep engineering teams technically aligned."
+      ],
+      "technologies": [
+        "Agile"
+      ]
+    },
+    {
+      "company": "Projects Clinic, University at Buffalo",
+      "logo": "assets/images/logos/university-at-buffalo.svg",
+      "title": "Student Assistant Intern",
+      "start": "Jan 2025",
+      "end": "May 2025",
+      "location": "USA",
+      "highlights": [
+        "Established a fully automated workflow for the UB CLOE department, improving turnaround and reducing manual effort by 60%.",
+        "Engineered a Python-based automation system integrating data ingestion, visualization and reporting.",
+        "Built a utility that converts CSV-based employee data into personalized PDF reports with embedded visual analytics."
+      ],
+      "technologies": [
+        "Python",
+        "CSV",
+        "PDF"
+      ]
+    },
+    {
+      "company": "Tata Consultancy Services",
+      "logo": "assets/images/logos/tata-consultancy-services.svg",
+      "title": "IT Analyst",
+      "start": "Aug 2021",
+      "end": "Apr 2022",
+      "location": "India",
+      "highlights": [
+        "Designed and implemented BPMN- and CMMN-based process models in Appian to automate commercial loan origination, reducing manual processing time by about 35%.",
+        "Integrated external systems via REST APIs for authentication, exception flows and data mapping with JSON payloads.",
+        "Created decision tables to standardize credit policy checks and automate routing decisions, improving SLA compliance."
+      ],
+      "technologies": [
+        "Appian",
+        "BPMN",
+        "CMMN",
+        "REST APIs",
+        "JSON"
+      ]
+    },
+    {
+      "company": "Fujitsu Consulting India",
+      "logo": "assets/images/logos/fujitsu-consulting-india.svg",
+      "title": "Application Developer",
+      "start": "May 2019",
+      "end": "Aug 2021",
+      "location": "India",
+      "highlights": [
+        "Led a cross-functional team of 5 developers to deliver scalable enterprise BPM applications using Flowable.",
+        "Developed complex process models, records, reports and user web interfaces with data-driven rules and security.",
+        "Delivered architecture diagrams, test plans and production deployment guides to support delivery assurance.",
+        "Earned the Best Practice Award for Kakushin Forum and the Star Silver Award for exceptional client services and solution delivery."
+      ],
+      "technologies": [
+        "Flowable",
+        "BPM"
+      ]
+    },
+    {
+      "company": "LTIMindtree",
+      "logo": "assets/images/logos/ltimindtree.svg",
+      "title": "Senior Software Engineer",
+      "start": "Nov 2014",
+      "end": "May 2019",
+      "location": "India",
+      "highlights": [
+        "Led the successful proof of concept and full implementation of a Credit Note Application, winning a multimillion-dollar project.",
+        "Developed SAIL-based forms, automated notifications and role-based task assignments using Appian Groups and Security.",
+        "Used SAIL, Appian Designer and Appian Query Rules to build user-friendly interfaces and efficient backend logic.",
+        "Recognized with the Individual Valuable Category Award and the LTI Pride Award for technical excellence and client impact."
+      ],
+      "technologies": [
+        "Appian",
+        "SAIL",
+        "Appian Designer",
+        "Appian Query Rules"
+      ]
+    }
+  ]
+}

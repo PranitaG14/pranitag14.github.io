@@ -1,0 +1,63 @@
+{
+  "groups": [
+    {
+      "name": "Programming & Databases",
+      "items": [
+        "Python",
+        "JavaScript",
+        "SQL",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "APIs & Methodologies",
+      "items": [
+        "REST API",
+        "SOAP API",
+        "AWS",
+        "BPMN 2.0",
+        "CMMN",
+        "DMN",
+        "CI/CD pipelines",
+        "Agile/Scrum"
+      ]
+    },
+    {
+      "name": "AI & Automation",
+      "items": [
+        "n8n",
+        "OpenAI GPT-4",
+        "Claude Code",
+        "RAG workflows",
+        "Prompt engineering"
+      ]
+    },
+    {
+      "name": "BPM Platforms",
+      "items": [
+        "Appian",
+        "Flowable",
+        "Camunda"
+      ]
+    },
+    {
+      "name": "Tools",
+      "items": [
+        "Git",
+        "GitHub",
+        "Postman",
+        "Jira",
+        "DBeaver"
+      ]
+    },
+    {
+      "name": "Python Packages",
+      "items": [
+        "NumPy",
+        "Pandas"
+      ]
+    }
+  ]
+}

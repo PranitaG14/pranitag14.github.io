@@ -1,0 +1,242 @@
+/* Sleek Modern, printed: dark ink on white, nothing hidden by a reveal, no bar or glow, the
+ * glass turned into hairline boxes, and cards kept whole across pages. */
+
+@page {
+  margin: 14mm 12mm;
+}
+
+html,
+body {
+  background: #fff !important;
+  color: #0f172a !important;
+}
+
+.bar,
+.skip,
+.hero-bg,
+.menu-btn,
+.foot-top,
+.caret,
+.portrait::before,
+.code::before {
+  display: none !important;
+}
+
+.motion-ok .reveal,
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+*,
+*::before,
+*::after {
+  animation: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* every word prints in dark ink, the gradient words included; the accents print blue */
+body * {
+  color: #1e293b !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body .h2,
+body .contact-title,
+body .name-text {
+  background: none !important;
+  color: #0f172a !important;
+}
+
+body .kit-readout__value,
+body .cover-num {
+  background: none !important;
+  color: #1d4ed8 !important;
+}
+
+.band,
+.hero,
+.contact-panel,
+.feature-media {
+  background: #fff !important;
+}
+
+.band {
+  border-color: #e2e8f0 !important;
+}
+
+.hero {
+  padding-block: 0 8mm !important;
+}
+
+.sec,
+.creds {
+  padding-block: 7mm !important;
+}
+
+.head {
+  margin-bottom: 6mm !important;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) !important;
+  gap: 8mm !important;
+}
+
+.name {
+  font-size: 30pt !important;
+}
+
+.stage {
+  break-inside: avoid;
+}
+
+.badges {
+  display: none !important;
+}
+
+/* everything that is glass on screen is a hairline box on paper */
+.status,
+.role-badge,
+.eyebrow,
+.readouts,
+.kit-readout,
+.fact,
+.group,
+.role,
+.role-meta,
+.feature,
+.card,
+.cred,
+.edu,
+.cert,
+.contact-panel,
+.kit-contact,
+.kit-cta,
+.kit-social__link,
+.kit-link,
+.chips > li,
+.window,
+.window::before,
+.code,
+.code-win,
+.code-bar,
+.portrait-card,
+.fact-icon,
+.group-icon,
+.cred-icon,
+.ch-icon,
+.role-mono,
+.role-badge-icon,
+.badge-icon {
+  border-color: #cbd5e1 !important;
+  background: #fff !important;
+  color: #0f172a !important;
+}
+
+.readouts {
+  background: #cbd5e1 !important;
+}
+
+.role-badge {
+  border: 1px solid #cbd5e1 !important;
+}
+
+.kit-cta--primary {
+  border: 1px solid #1d4ed8 !important;
+}
+
+.role.is-current::before,
+.edu::before,
+.cert::before,
+.role-points > li::before,
+.edu-details > li::before,
+.results > li::before {
+  background: #1d4ed8 !important;
+}
+
+.checks > li::before {
+  background: #eff6ff !important;
+  border-color: #1d4ed8 !important;
+}
+
+.checks > li::after {
+  border-color: #1d4ed8 !important;
+}
+
+.results > li::after {
+  border-color: #fff !important;
+}
+
+body .eyebrow,
+body .eyebrow .kit-icon,
+body .fact-label,
+body .stack-label,
+body .earlier-label,
+body .kicker,
+body .num,
+body .edu-when,
+body .cert-date,
+body .ch-label,
+body .brand-angle,
+body .role-now,
+body .kit-cta--primary,
+body .fig-open {
+  color: #1d4ed8 !important;
+}
+
+body .code-body > li::before {
+  color: #64748b !important;
+}
+
+body .t-k {
+  color: #6d28d9 !important;
+}
+
+body .t-v,
+body .t-p {
+  color: #1d4ed8 !important;
+}
+
+body .t-s {
+  color: #047857 !important;
+}
+
+.role,
+.feature,
+.card,
+.group,
+.fact,
+.edu,
+.cert,
+.kit-readout,
+.kit-contact {
+  break-inside: avoid;
+}
+
+.cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.cards > .card {
+  grid-column: span 1 !important;
+}
+
+.feature {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+}
+
+.window > img {
+  max-height: 70mm;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}

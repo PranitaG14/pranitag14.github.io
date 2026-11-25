@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>previewd schematic: PR webhook to namespace controller</title>
+<desc>Signed GitHub pull_request webhook is recorded as a PreviewEnvironment in kube-apiserver. The reconciler watches it, decides with a pure state machine, renders and server-side applies a namespace bundle, and reports commit status back to GitHub. An orphan collector deletes stale namespaces and metrics go to Prometheus.</desc>
+<defs>
+<pattern id="mi" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#f8fafc" stroke-opacity="0.05"/></pattern>
+<pattern id="ma" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#f8fafc" stroke-opacity="0.09"/></pattern>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f8fafc" fill-opacity="0.7"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#60a5fa"/></marker>
+<style>
+.t{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:0.06em;fill:#f8fafc}
+.h{font-size:11px}
+.s{fill-opacity:0.7}
+.n{font-size:18px;fill:#60a5fa}
+.k{fill:#60a5fa}
+.b{fill:#020617;stroke:#f8fafc;stroke-opacity:0.6;stroke-width:1}
+.l{fill:none;stroke:#f8fafc;stroke-opacity:0.6;stroke-width:1}
+.a{fill:none;stroke:#60a5fa;stroke-width:1}
+</style>
+</defs>
+<rect width="640" height="360" fill="#020617"/>
+<rect width="640" height="360" fill="url(#mi)"/>
+<rect width="640" height="360" fill="url(#ma)"/>
+
+<rect x="16" y="16" width="608" height="24" fill="none" stroke="#f8fafc" stroke-opacity="0.4"/>
+<text x="28" y="32" class="t h">PN-02 · PREVIEWD · PR WEBHOOK TO NAMESPACE CONTROLLER</text>
+
+<rect x="16" y="60" width="112" height="44" class="b"/>
+<text x="28" y="78" class="t">GITHUB</text>
+<text x="28" y="92" class="t s">pull_request</text>
+
+<rect x="176" y="60" width="116" height="44" class="b"/>
+<text x="188" y="78" class="t">WEBHOOK</text>
+<text x="188" y="92" class="t s">verify·dedupe</text>
+
+<rect x="332" y="60" width="112" height="44" class="b"/>
+<text x="344" y="78" class="t">INTAKE</text>
+<text x="344" y="92" class="t s">upsert spec</text>
+
+<rect x="488" y="60" width="136" height="44" class="b"/>
+<text x="500" y="78" class="t">KUBE-APISERVER</text>
+<text x="500" y="92" class="t s">PreviewEnvironment</text>
+
+<line x1="128" y1="82" x2="176" y2="82" class="a" marker-end="url(#ac)"/>
+<line x1="292" y1="82" x2="332" y2="82" class="a" marker-end="url(#ac)"/>
+<line x1="444" y1="82" x2="488" y2="82" class="a" marker-end="url(#ac)"/>
+
+<rect x="200" y="140" width="240" height="160" class="b"/>
+<text x="212" y="156" class="t">RECONCILER</text>
+<rect x="216" y="166" width="208" height="34" class="l"/>
+<text x="224" y="180" class="t">LIFECYCLE.DECIDE</text>
+<text x="224" y="192" class="t s">pure state machine</text>
+<rect x="216" y="212" width="208" height="34" class="l"/>
+<text x="224" y="226" class="t">RENDERER</text>
+<text x="224" y="238" class="t s">templates · guard rails</text>
+<rect x="216" y="258" width="208" height="34" class="l"/>
+<text x="224" y="272" class="t">SCM REPORTER</text>
+<text x="224" y="284" class="t s">commit status</text>
+
+<polyline points="520,104 520,122 400,122 400,140" class="l" marker-end="url(#ar)"/>
+<text x="528" y="116" class="t s">WATCH</text>
+
+<polyline points="440,180 600,180 600,104" class="a" marker-end="url(#ac)"/>
+<text x="452" y="172" class="t s">SERVER-SIDE APPLY</text>
+
+<polyline points="216,275 72,275 72,104" class="l" marker-end="url(#ar)"/>
+<text x="80" y="196" class="t s">COMMIT STATUS</text>
+
+<line x1="320" y1="300" x2="320" y2="312" class="l" marker-end="url(#ar)"/>
+<rect x="200" y="312" width="240" height="32" class="b"/>
+<text x="212" y="332" class="t">NAMESPACE BUNDLE</text>
+
+<rect x="16" y="312" width="150" height="32" class="b"/>
+<text x="28" y="332" class="t">ORPHAN COLLECTOR</text>
+<line x1="166" y1="328" x2="200" y2="328" class="l" marker-end="url(#ar)"/>
+
+<rect x="474" y="312" width="150" height="32" class="b"/>
+<text x="486" y="332" class="t">PROMETHEUS</text>
+<polyline points="440,296 540,296 540,312" class="l" stroke-dasharray="3 3" marker-end="url(#ar)"/>
+<text x="548" y="306" class="t s">/METRICS</text>
+
+<rect x="468" y="198" width="156" height="40" class="l"/>
+<text x="480" y="228" class="n">11</text>
+<text x="516" y="214" class="t">OBJECTS</text>
+<text x="516" y="226" class="t s">PER NAMESPACE</text>
+
+<rect x="468" y="248" width="156" height="40" class="l"/>
+<text x="480" y="278" class="n">72h</text>
+<text x="516" y="272" class="t">DEFAULT TTL</text>
+</svg>

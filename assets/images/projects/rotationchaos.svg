@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" letter-spacing="0.06em">
+<title>PN-05 rotationchaos schematic</title>
+<desc>Blueprint schematic: scenario catalogue drives run_scenario, which ticks a workload that rotates its SVID at half-TTL from a certificate authority. The trust bundle returns a named failure, then the authorization policy allows or denies, and the run result feeds the demo and tests.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0 L0 0 0 16" fill="none" stroke="#f8fafc" stroke-opacity="0.05" stroke-width="1"/>
+</pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M80 0 L0 0 0 80" fill="none" stroke="#f8fafc" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M0 0 L10 5 L0 10 z" fill="#f8fafc" fill-opacity="0.7"/>
+</marker>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M0 0 L10 5 L0 10 z" fill="#60a5fa"/>
+</marker>
+</defs>
+
+<rect x="0" y="0" width="640" height="360" fill="#020617"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#mn)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="24" fill="#020617" stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1"/>
+<text x="28" y="32" font-size="10" fill="#f8fafc">PN-05 · ROTATIONCHAOS · ROTATION PATH UNDER FAULT INJECTION</text>
+
+<g stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" fill="#020617">
+<rect x="16" y="70" width="124" height="52"/>
+<rect x="16" y="170" width="124" height="52"/>
+<rect x="200" y="60" width="130" height="52"/>
+<rect x="200" y="170" width="130" height="52"/>
+<rect x="390" y="60" width="110" height="52"/>
+<rect x="390" y="170" width="110" height="52" stroke="#60a5fa" stroke-opacity="0.9"/>
+<rect x="200" y="268" width="130" height="52"/>
+<rect x="390" y="268" width="110" height="52"/>
+</g>
+
+<g font-size="10" fill="#f8fafc">
+<text x="26" y="90">CATALOGUE</text>
+<text x="26" y="190">RUN_SCENARIO</text>
+<text x="210" y="80">CERT AUTHORITY</text>
+<text x="210" y="190">WORKLOAD</text>
+<text x="400" y="80">TRUST BUNDLE</text>
+<text x="400" y="190" fill="#60a5fa">AUTHZ POLICY</text>
+<text x="210" y="288">RUN RESULT</text>
+<text x="400" y="288">DEMO/TESTS</text>
+</g>
+<g font-size="9" fill="#f8fafc" fill-opacity="0.7">
+<text x="26" y="106">chaos.py</text>
+<text x="26" y="206">1 tick = 1 s</text>
+<text x="210" y="96">identity.py</text>
+<text x="210" y="206">rotate @ TTL/2</text>
+<text x="400" y="96">named failure</text>
+<text x="400" y="206">SPIFFE ID</text>
+<text x="210" y="304">failed_open</text>
+<text x="400" y="304">fail-closed</text>
+</g>
+
+<g stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" fill="none" marker-end="url(#ah)">
+<line x1="78" y1="122" x2="78" y2="170"/>
+<line x1="140" y1="196" x2="200" y2="196"/>
+<line x1="265" y1="170" x2="265" y2="112"/>
+<polyline points="330,184 370,184 370,104 390,104"/>
+<polyline points="445,222 445,246 300,246 300,268"/>
+<line x1="330" y1="294" x2="390" y2="294"/>
+</g>
+<line x1="330" y1="86" x2="390" y2="86" stroke="#60a5fa" stroke-width="1" marker-end="url(#ab)"/>
+<line x1="445" y1="112" x2="445" y2="170" stroke="#60a5fa" stroke-width="1" marker-end="url(#ab)"/>
+
+<g font-size="9" fill="#f8fafc" fill-opacity="0.7">
+<text x="143" y="188">tick</text>
+<text x="272" y="146">issue()</text>
+<text x="336" y="78">verify</text>
+<text x="336" y="200">SVID</text>
+<text x="452" y="146">valid</text>
+<text x="452" y="238">allow/deny</text>
+</g>
+
+<g stroke="#f8fafc" stroke-opacity="0.6" stroke-width="1" fill="#020617">
+<rect x="530" y="70" width="94" height="52"/>
+<rect x="530" y="134" width="94" height="52"/>
+<rect x="530" y="198" width="94" height="52"/>
+</g>
+<g font-size="14" fill="#60a5fa">
+<text x="540" y="96">60s</text>
+<text x="540" y="160">9</text>
+<text x="540" y="224">1,666</text>
+</g>
+<g font-size="9" fill="#f8fafc" fill-opacity="0.7">
+<text x="540" y="112">SVID TTL</text>
+<text x="540" y="176">SCENARIOS</text>
+<text x="540" y="240">ROTATIONS</text>
+</g>
+
+<line x1="16" y1="330" x2="48" y2="330" stroke="#60a5fa" stroke-width="1"/>
+<text x="56" y="333" font-size="9" fill="#f8fafc" fill-opacity="0.7">FAIL-CLOSED ON EVERY DENIAL</text>
+</svg>
