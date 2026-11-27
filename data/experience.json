@@ -20,7 +20,7 @@
     },
     {
       "company": "Holiday Channel",
-      "logo": "assets/images/logos/holiday-channel.svg",
+      "logo": "assets/images/logos/holiday-channel.png",
       "title": "Engineering Manager Intern",
       "start": "Aug 2025",
       "end": "Oct 2025",
@@ -36,7 +36,7 @@
     },
     {
       "company": "Projects Clinic, University at Buffalo",
-      "logo": "assets/images/logos/university-at-buffalo.svg",
+      "logo": "assets/images/logos/university-at-buffalo.png",
       "title": "Student Assistant Intern",
       "start": "Jan 2025",
       "end": "May 2025",
@@ -54,7 +54,7 @@
     },
     {
       "company": "Tata Consultancy Services",
-      "logo": "assets/images/logos/tata-consultancy-services.svg",
+      "logo": "assets/images/logos/tata-consultancy-services.png",
       "title": "IT Analyst",
       "start": "Aug 2021",
       "end": "Apr 2022",
@@ -74,7 +74,7 @@
     },
     {
       "company": "Fujitsu Consulting India",
-      "logo": "assets/images/logos/fujitsu-consulting-india.svg",
+      "logo": "assets/images/logos/fujitsu-consulting-india.png",
       "title": "Application Developer",
       "start": "May 2019",
       "end": "Aug 2021",
@@ -92,7 +92,7 @@
     },
     {
       "company": "LTIMindtree",
-      "logo": "assets/images/logos/ltimindtree.svg",
+      "logo": "assets/images/logos/ltimindtree.png",
       "title": "Senior Software Engineer",
       "start": "Nov 2014",
       "end": "May 2019",
